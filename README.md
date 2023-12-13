@@ -4,25 +4,68 @@
 
 ---
 
-## Our exploratory data analysis on this dataset can be found [here](https://ketkichakradeo.github.io/recipeanalysis/).
+### Our exploratory data analysis on this dataset can be found [here](https://ketkichakradeo.github.io/recipeanalysis/).
 
 ---
 
 ## Project Overview
 
-Food is a crucial aspect of human lives because it universally represents culture, family, and love. In this project, we chose to explore a dataset composed of various recipes with their ratings and reviews to uncover what factors contribute to an individual’s satisfaction and enjoyment for a meal.
+In this project, we chose to explore a dataset composed of various recipes with their ratings and reviews to to try to classify a recipe into a rating group based on certain features.
 
 Our dataset is a subset downloaded from [food.com](http://food.com), and it was originally scraped and used by the authors of [this](https://cseweb.ucsd.edu/~jmcauley/pdfs/emnlp19c.pdf) recommender systems paper. The data comes in two raw csv files: RAW_recipes.csv and RAW_interactions.csv. The former dataset contains recipe names, ingredients, nutritional facts, reviews, and more information regarding the recipes themselves, while the latter dataset contains user reviews and ratings for each recipe.
 
 
-This is a data science project for UCSD's DSC80 class. In this project, we will first clean the data and explore the question of how the number of ingredients, number of steps, rating, and cooking time (in minutes) impact the overall success and user satisfaction of recipes. Then, we’ll assess the missingness of the columns and analyze any missingness dependencies. Finally, we will perform multiple permutation tests to evaluate if the average rating decreases due to time taken, number of steps, and number of ingredients. 
+This is a data science project for UCSD's DSC80 class. In this project, we will clean the data and train a classification model on the data. 
 
-We categorize recipes with a duration exceeding the median value as 'longer' recipes, and 'more' steps are defined by a step count greater than the median within the respective column. Similarly, the definition of 'more' ingredients follows the same criterion based on quantities greater than the median in the corresponding column.
+Through this exploration, we aim to contribute to a deeper comprehension of the multifaceted nature of human satisfaction and connection through the medium of food.
 
-Understanding these dynamics has implications not only for the culinary world but also for fields such as nutrition, hospitality, and even artificial intelligence-driven recommendation systems. Through this exploration, we aim to contribute to a deeper comprehension of the multifaceted nature of human satisfaction and connection through the medium of food.
+## Framing the Problem
+** Problem Identification
+We are exploring the following question: Can we predict a recipe rating based on recipe length, number of steps, and number of ingredients?
 
-### Question Identification
-We are exploring the following question: How does the number of ingredients, number of steps, rating, and cooking time (in minutes) impact the overall success and user satisfaction of recipes?
+This prediction problem is a classification type of problem. We are performing multi-class classification as each rating is its own class. In this problem, there are 5 possible ratings, ranging from 1 star to 5 stars, and thus each rating is a different class and there are 5 classes in total.
+
+The response variable is the the recipe rating. We are trying to predict how many stars a recipe will get based on other features. At the time of prediction, the only features that we know are the recipe length, number of steps, and number of ingredients. All of this information is not dependent on the actual execution of the recipe, therefore we are able to use these features to train our model.
+
+The metric we are using to evaluate our model is the accuracy score. We chose this score because the distribution of classes was pretty well balanced. Accuracy is the ratio of correctly predicted instances to total instances, and because false negatives or false positives don't have a huge implication here, we are choosing to focus on the true negatives and true positives.
+
+## Baseline Model
+** Model Description **
+
+** Features in the Model **
+
+** Encoding**
+
+** Performance of the model**
+
+
+## Final Model
+** Added Features**
+
+** Modeling Algorithm**
+
+** Visualizaation**
+
+
+## Fairness Analysis
+** Group X: **
+egfjaef
+
+** Group Y:**
+
+** Null Hypothesis:**
+
+** Alternative Hypothesis:**
+
+** Test Statistic:**
+
+** Significance Level: **
+
+** P value: **
+
+** Conclusion:**
+
+** Visualization:**
 
 ### Introduction to the Dataset
 In our RAW_recipes.csv dataset, there are 83782 rows from 2008 to 2018, and 10 columns.
