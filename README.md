@@ -4,7 +4,7 @@
 
 ---
 
-### Our exploratory data analysis on this dataset can be found [here](https://ketkichakradeo.github.io/recipeanalysis/).
+Our **exploratory data analysis** on this dataset can be found [here](https://ketkichakradeo.github.io/recipeanalysis/).
 
 ---
 
@@ -13,7 +13,6 @@
 In this project, we chose to explore a dataset composed of various recipes with their ratings and reviews to to try to classify a recipe into a rating group based on certain features.
 
 Our dataset is a subset downloaded from [food.com](http://food.com), and it was originally scraped and used by the authors of [this](https://cseweb.ucsd.edu/~jmcauley/pdfs/emnlp19c.pdf) recommender systems paper. The data comes in two raw csv files: RAW_recipes.csv and RAW_interactions.csv. The former dataset contains recipe names, ingredients, nutritional facts, reviews, and more information regarding the recipes themselves, while the latter dataset contains user reviews and ratings for each recipe.
-
 
 This is a data science project for UCSD's DSC80 class. In this project, we will clean the data and train a classification model on the data. 
 
@@ -25,9 +24,9 @@ We are exploring the following question: Can we predict a recipe rating based on
 
 This prediction problem is a **classification** type of problem. We are performing multi-class classification as each rating is its own class. In this problem, there are 5 possible ratings, ranging from 1 star to 5 stars, and thus each rating is a different class and there are 5 classes in total.
 
-The **response variable** is the the recipe rating. We are trying to predict how many stars a recipe will get based on other features. At the time of prediction, the only features that we know are the recipe length, number of steps, and number of ingredients. All of this information is not dependent on the actual execution of the recipe, therefore we are able to use these features to train our model.
+The **response variable** is the the recipe `'rating'`. We are trying to predict how many stars a recipe will get based on other features. At the time of prediction, the only features that we know are the recipe length, number of steps, and number of ingredients. All of this information is not dependent on the actual execution of the recipe, therefore we are able to use these features to train our model.
 
-The metric we are using to evaluate our model is the accuracy score. We chose this score because the distribution of classes was pretty well balanced. Accuracy is the ratio of correctly predicted instances to total instances, and because false negatives or false positives don't have a huge implication here, we are choosing to focus on the true negatives and true positives.
+The metric we are using to evaluate our model is the precision score. We chose this score because the distribution of classes was not very balanced. In this scenario, making a wrong prediction could be pretty costly because it involves people's likes and dislikes, which is why we prioritized precision. Finally, our main interest is in the performance of the model on how correctly it identifies positive instances. Good ratings are more important to reccommend because the subjective nature of bad reviews makes it crucial to avoid overlooking potentially good options.
 
 ## Baseline Model
 **Model Description**
@@ -36,8 +35,8 @@ Our baseline model is a Random Forest Regression Model. We tried to predict the 
 **Features in the Model**
 In our baseline model, there are a few features we are examining. They are: `'minutes'` (quantitative continuous) , `'n_steps'` (ordinal discrete)  and `'n_ingredients'` (ordinal discrete). 
 
-**Encoding**
-None of our features were qualititave. Therefore, we did not have to use any encoding techniques such as One Hot encoding. However, we employed a Binarizer to help classify certain recipes as having many steps or not that many steps. We applied the Binarizer to the `'n_steps'` feature in order to get an array of '1' and '0'. If the recipe had a lot of steps, it was labeled as a '1' and as a '0' otherwise. 
+**Encoding and Transformation**
+None of our features were qualititave. Therefore, we did not have to use any encoding techniques such as One Hot encoding. However, we employed a Binarizer to help classify certain recipes as having many steps or not that many steps. We applied the Binarizer to the `'n_steps'` feature in order to get an array of '1' and '0'. If the recipe had a lot of steps, it was labeled as a '1' and as a '0' otherwise. We used the Binarizer on the other columns too, `'minutes'` and `'n_ingredients'. 
 
 **Performance of the Model**
 After running our model, we can see that the test and train score were high and very similar to each other. Therefore we beleive our baseline model is good. The actual scores themselves are pretty high; both are in the 77% range, which means that it correctly predicts a rating more than 3/4 of the time, which we think is very good. Additionally, the test and train score are almost equal to each other, showing that the baseline model does generalize well to other datasets.
@@ -47,7 +46,7 @@ After running our model, we can see that the test and train score were high and 
 
 ## Final Model
 **Added Features**
-For our final model we decided to include more features relating to the nutrional facts of the recipe. We added the `'calories'` and `'sugar features'` and transforomed them to represent `'high_calories'` and `'high_sugar'` using a Binarizer. This is very similar to what we did on the other columns. We also decided to include `'n_steps'` and `'n_steps'` as we think adding more features will help to create a stronger model.
+For our final model we decided to include more features relating to the nutrional facts of the recipe. We added the `'calories'` and `'sugar features'` and transforomed them to represent `'high_calorie'` and `'high_sugar'` using a Binarizer. This is very similar to what we did on the other columns. We also decided to include `'avg_rating'` and `'review'` as we think adding more features will help to create a stronger model.
 **Modeling Algorithm**
 
 **Visualizaation**
