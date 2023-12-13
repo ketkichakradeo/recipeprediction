@@ -20,7 +20,7 @@ This is a data science project for UCSD's DSC80 class. In this project, we will 
 Through this exploration, we aim to contribute to a deeper comprehension of the multifaceted nature of human satisfaction and connection through the medium of food.
 
 ## Framing the Problem
-** Problem Identification
+**Problem Identification**
 We are exploring the following question: Can we predict a recipe rating based on recipe length, number of steps, and number of ingredients?
 
 This prediction problem is a classification type of problem. We are performing multi-class classification as each rating is its own class. In this problem, there are 5 possible ratings, ranging from 1 star to 5 stars, and thus each rating is a different class and there are 5 classes in total.
@@ -30,42 +30,42 @@ The response variable is the the recipe rating. We are trying to predict how man
 The metric we are using to evaluate our model is the accuracy score. We chose this score because the distribution of classes was pretty well balanced. Accuracy is the ratio of correctly predicted instances to total instances, and because false negatives or false positives don't have a huge implication here, we are choosing to focus on the true negatives and true positives.
 
 ## Baseline Model
-** Model Description **
+**Model Description**
 
-** Features in the Model **
+**Features in the Model**
 
-** Encoding**
+**Encoding**
 
-** Performance of the model**
+**Performance of the model**
 
 
 ## Final Model
-** Added Features**
+**Added Features**
 
-** Modeling Algorithm**
+**Modeling Algorithm**
 
-** Visualizaation**
+**Visualizaation**
 
 
 ## Fairness Analysis
-** Group X: **
+**Group X:**
 egfjaef
 
-** Group Y:**
+**Group Y:**
 
-** Null Hypothesis:**
+**Null Hypothesis:**
 
-** Alternative Hypothesis:**
+**Alternative Hypothesis:**
 
-** Test Statistic:**
+**Test Statistic:**
 
-** Significance Level: **
+**Significance Level:**
 
-** P value: **
+**P value:**
 
-** Conclusion:**
+**Conclusion:**
 
-** Visualization:**
+**Visualization:**
 
 ### Introduction to the Dataset
 In our RAW_recipes.csv dataset, there are 83782 rows from 2008 to 2018, and 10 columns.
