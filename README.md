@@ -2,7 +2,10 @@
 
 **Authors**: Ketki Chakradeo (kchakradeo@ucsd.edu) and Kayanne Tran (kqtran@ucsd.edu)
 
+---
+
 ## Our exploratory data analysis on this dataset can be found [here](https://ketkichakradeo.github.io/recipeanalysis/).
+
 ---
 
 ## Project Overview
