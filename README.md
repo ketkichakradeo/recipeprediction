@@ -61,17 +61,21 @@ The **performance** of our final model is a great improvement over the baseline 
 
 ## Fairness Analysis
 **Group X:**
-egfjaef
+
 
 **Group Y:**
 
 **Null Hypothesis:**
+Our model is fair. It's precision for five star ratings and one star ratings is roughly the same, and any differences are due to chance.
 
 **Alternative Hypothesis:**
+Our model is unfair, and it's precision for five stars is higher than the one star ratings.
 
 **Test Statistic:**
+The test statistic is the signed difference between the precision score of five star ratings and one star ratings.
 
 **Significance Level:**
+The significance level is 0.05.
 
 **P value:**
 
