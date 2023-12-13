@@ -47,7 +47,9 @@ After running our model, we can see that the test and train score were high and 
 
 ## Final Model
 **Added Features**
-For our final model we decided to include more features relating to the nutrional facts of the recipe. We added the `'calories'` and `'sugar features'` and transforomed them to represent `'high_calorie'` and `'high_sugar'` using a Binarizer. This is very similar to what we did on the other columns. We also decided to include `'avg_rating'` and `'review'` as we think adding more features will help to create a stronger model.
+For our final model we decided to include more features relating to the nutrional facts of the recipe. We added the `'calories'` and `'sugar features'` and transforomed them to represent `'high_calorie'` and `'high_sugar'` using a Binarizer. This is very similar to what we did on the other columns. We chose to add these columns because the nutritional value of a recipe could also determine what people think of it. People might give very low ratings to recipes with high calories and high sugar content. We also decided to include `'avg_rating'` and `'review'` as we think adding more features will help to create a stronger model.
+
+
 **Modeling Algorithm**
 
 **Visualizaation**
