@@ -26,7 +26,7 @@ This prediction problem is a **classification** type of problem. We are performi
 
 The **response variable** is the the recipe `'rating'`. We are trying to predict how many stars a recipe will get based on other features. At the time of prediction, the only features that we know are the recipe length, number of steps, and number of ingredients. All of this information is not dependent on the actual execution of the recipe, therefore we are able to use these features to train our model.
 
-The metric we are using to evaluate our model is the precision score. We chose this score because the distribution of classes was not very balanced. In this scenario, making a wrong prediction could be pretty costly because it involves people's likes and dislikes, which is why we prioritized precision. Finally, our main interest is in the performance of the model on how correctly it identifies positive instances. Good ratings are more important to reccommend because the subjective nature of bad reviews makes it crucial to avoid overlooking potentially good options.
+The **metric** we are using to evaluate our model is the precision score. We chose this score because the distribution of classes was not very balanced. In this scenario, making a wrong prediction could be pretty costly because it involves people's likes and dislikes, which is why we prioritized precision. Finally, our main interest is in the performance of the model on how correctly it identifies positive instances. Good ratings are more important to reccommend because the subjective nature of bad reviews makes it crucial to avoid overlooking potentially good options.
 
 ## Baseline Model
 **Model Description**
@@ -40,9 +40,10 @@ None of our features were qualititave. Therefore, we did not have to use any enc
 
 **Performance of the Model**
 After running our model, we can see that the test and train score were high and very similar to each other. Therefore we beleive our baseline model is good. The actual scores themselves are pretty high; both are in the 77% range, which means that it correctly predicts a rating more than 3/4 of the time, which we think is very good. Additionally, the test and train score are almost equal to each other, showing that the baseline model does generalize well to other datasets.
-| Training Precision Score | Testing Score | 
-----:|----:|
-| 0.7750951868909223 | 0.7764207023879568 |
+
+|Training Precision Score|Testing Precision Score|
+|---|---|
+|0.7750951868909223	|0.7764207023879568|
 
 ## Final Model
 **Added Features**
