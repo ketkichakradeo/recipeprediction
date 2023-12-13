@@ -30,7 +30,7 @@ The **metric** we are using to evaluate our model is the precision score. We cho
 
 ## Baseline Model
 **Model Description**
-Our baseline model is a Random Forest Regression Model. We tried to predict the rating of a recipe. We utilized a train-test-split model and used a test size of 0.25.
+Our baseline model is a Decision Tree Model. We tried to predict the rating of a recipe. We utilized a train-test-split model and used a test size of 0.25.
 
 **Features in the Model**
 In our baseline model, there are a few features we are examining. They are: `'minutes'` (quantitative continuous) , `'n_steps'` (ordinal discrete)  and `'n_ingredients'` (ordinal discrete). 
@@ -49,10 +49,14 @@ After running our model, we can see that the test and train score were high and 
 **Added Features**
 For our final model we decided to include more features relating to the nutrional facts of the recipe. We added the `'calories'` and `'sugar features'` and transforomed them to represent `'high_calorie'` and `'high_sugar'` using a Binarizer. This is very similar to what we did on the other columns. We chose to add these columns because the nutritional value of a recipe could also determine what people think of it. People might give very low ratings to recipes with high calories and high sugar content. We also decided to include `'avg_rating'` and `'review'` as we think adding more features will help to create a stronger model.
 
-
 **Modeling Algorithm**
+The modeling algorithm we chose was Random Forest Classifier. The benefits of using this type of model are that it is an ensemble method that combines the predictions of multiple decision trees, it is less prone to overfitting unlike a decision tree, and it can properly deal with imbalanced data.
 
-**Visualizaation**
+To select the **hyperparameters**, we used a Grid Search algorithm that tested out different values for the different parameters of a Random Forest. The main parameter we focused on was max_depth, as too deep of a model can lead to overfitting. Through the grid search, we were able to find out the the best max_depth was 22 for our model.
+
+The **performance** of our final model is a great improvement over the baseline model. The precision score of our final model is significantly higher than the baseline model, which is most likely due to the added features and hyperparamter tuning of the max_depth. 
+
+**Visualization**
 
 
 ## Fairness Analysis
