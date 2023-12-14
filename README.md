@@ -60,26 +60,25 @@ The **performance** of our final model is a great improvement over the baseline 
 
 
 ## Fairness Analysis
-**Group X:**
-
-
-**Group Y:**
+To determine if our model is truly fair, we will specifically examine possible bias between the difference in performance between two defined groups. We wanted to see if recipes with higher average ratings and lower average ratings were rated fairly. Here, we define “higher average ratings” as greater than or equal to 3.5, and “lower average ratings” as those less than 3.5. Our metric will be precision scores because we wish to focus on the true positive predictions our model makes.
 
 **Null Hypothesis:**
-Our model is fair. It's precision for five star ratings and one star ratings is roughly the same, and any differences are due to chance.
+Our model is fair. Its precision for recipes with higher average ratings and lower average ratings are roughly the same, and any differences are due to chance.
 
 **Alternative Hypothesis:**
-Our model is unfair, and it's precision for five stars is higher than the one star ratings.
+Our model is unfair, its precision for recipes with higher average ratings is higher than the higher average ratings.
 
 **Test Statistic:**
-The test statistic is the signed difference between the precision score of five star ratings and one star ratings.
+We will use the signed difference between the weighted precision score for these two groups (higher_avg_precision - lower-avg_precision). We are using weighted average to account for the class imbalance in the dataset since there are a lot more instances of higher ratings than lower ratings in both rating and avg_rating columns.
 
 **Significance Level:**
-The significance level is 0.05.
+The significance level is α = 0.05.
 
 **P value:**
+The p-value was 0.0.
 
 **Conclusion:**
+We ran permutation tests over 1000 iterations, shuffling the rating column and calculating the precision scores for the two respective groups defined above. Our computed p value was 0.0, which is less than our significance level, so we reject the null hypothesis. This implies that our model is biased towards higher average ratings.
 
 **Visualization:**
 
