@@ -33,7 +33,7 @@ The **metric** we are using to evaluate our model is the precision score. We cho
 Our baseline model is a Decision Tree Model. We tried to predict the rating of a recipe. We utilized a train-test-split model and used a test size of 0.25.
 
 **Features in the Model**
-In our baseline model, there are a few features we are examining. They are: `'minutes'` (quantitative continuous) , `'n_steps'` (ordinal discrete)  and `'n_ingredients'` (ordinal discrete). 
+In our baseline model, there are a few features we are examining. They are: `'minutes'` (continuous) , `'n_steps'` (discrete)  and `'n_ingredients'` (discrete). 
 
 **Encoding and Transformation**
 None of our features were qualititave. Therefore, we did not have to use any encoding techniques such as One Hot encoding. However, we employed a Binarizer to help classify certain recipes as having many steps or not that many steps. We applied the Binarizer to the `'n_steps'` feature in order to get an array of '1' and '0'. If the recipe had a lot of steps, it was labeled as a '1' and as a '0' otherwise. We used the Binarizer on the other columns too, `'minutes'` and `'n_ingredients'`. 
