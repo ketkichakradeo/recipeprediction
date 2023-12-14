@@ -1,4 +1,4 @@
-# Predicting Recipe Ratings hi test
+# Predicting Recipe Ratings hi test2
 
 **Authors**: Ketki Chakradeo (kchakradeo@ucsd.edu) and Kayanne Tran (kqtran@ucsd.edu)
 
@@ -59,8 +59,8 @@ To select the **hyperparameters**, we used a Grid Search algorithm that tested o
 The **performance** of our final model is a great improvement over the baseline model. The precision score of our final model is significantly higher than the baseline model, which is most likely due to the added features and hyperparamter tuning of the max_depth. 
 
 **Visualization**
-![de:hub.de-Projekt](cfm)
-<iframe src="graphs/cfm" width=800 height=600 frameBorder=0></iframe>
+![confusion matrix](/graphs/cfm)
+
 
 
 ## Fairness Analysis
