@@ -1,4 +1,4 @@
-# Predicting Recipe Ratings hi test2
+# Predicting Recipe Ratings
 
 **Authors**: Ketki Chakradeo (kchakradeo@ucsd.edu) and Kayanne Tran (kqtran@ucsd.edu)
 
@@ -86,5 +86,8 @@ We ran permutation tests over 1000 iterations, shuffling the rating column and c
 
 **Visualization:**
 <iframe src="graphs/differences_dist.html" width=800 height=600 frameBorder=0></iframe>
+
+## Conclusion 
+All in all, our classification model helped us gain some insight into how various features of a recipe can help to predict what the rating of that recipe will be. While our model had a high precision score, it's important to note that these results can not be fully relied upon as some unintended bias may be present in the model.
 
 
