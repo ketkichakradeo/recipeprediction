@@ -54,6 +54,8 @@ The modeling algorithm we chose was Random Forest Classifier. The benefits of us
 
 To select the **hyperparameters**, we used a Grid Search algorithm that tested out different values for the different parameters of a Random Forest. The main parameter we focused on was max_depth, as too deep of a model can lead to overfitting. Through the grid search, we were able to find out the the best max_depth was 22 for our model.
 
+<iframe src="/graphs/train_test_grapj.html" width=800 height=600 frameBorder=0></iframe>
+
 The **performance** of our final model is a great improvement over the baseline model. The precision score of our final model is significantly higher than the baseline model, which is most likely due to the added features and hyperparamter tuning of the max_depth. 
 
 **Visualization**
