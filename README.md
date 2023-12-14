@@ -81,7 +81,7 @@ The p-value was 0.0.
 We ran permutation tests over 1000 iterations, shuffling the rating column and calculating the precision scores for the two respective groups defined above. Our computed p value was 0.0, which is less than our significance level, so we reject the null hypothesis. This implies that our model is biased towards higher average ratings.
 
 **Visualization:**
-<iframe src="differences_dist.html" width=800 height=600 frameBorder=0></iframe>
+<iframe src="/graphs/differences_dist.html" width=800 height=600 frameBorder=0></iframe>
 
 
 
